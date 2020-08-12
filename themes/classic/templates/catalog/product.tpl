@@ -52,7 +52,7 @@
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
 
-    <div class="row product-container">
+    <div class="row">
       <div class="col-md-6">
         {block name='page_content_container'}
           <section class="page-content" id="content">
@@ -76,6 +76,7 @@
 
             {/block}
           </section>
+
         {/block}
         </div>
         <div class="col-md-6">
@@ -131,10 +132,6 @@
                     {include file='catalog/_partials/product-add-to-cart.tpl'}
                   {/block}
 
-                  {block name='product_additional_info'}
-                    {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block}
-
                   {* Input to refresh product HTML removed, block kept for compatibility with themes *}
                   {block name='product_refresh'}{/block}
                 </form>
@@ -142,29 +139,14 @@
 
             </div>
 
-            {block name='hook_display_reassurance'}
-              {hook h='displayReassurance'}
-            {/block}
 
             {block name='product_tabs'}
               <div class="tabs">
                 <ul class="nav nav-tabs" role="tablist">
-                  {if $product.description}
-                    <li class="nav-item">
-                       <a
-                         class="nav-link{if $product.description} active{/if}"
-                         data-toggle="tab"
-                         href="#description"
-                         role="tab"
-                         aria-controls="description"
-                         {if $product.description} aria-selected="true"{/if}>{l s='Description' d='Shop.Theme.Catalog'}</a>
-                    </li>
-                  {/if}
                   <li class="nav-item">
                     <a
                       class="nav-link{if !$product.description} active{/if}"
                       data-toggle="tab"
-                      href="#product-details"
                       role="tab"
                       aria-controls="product-details"
                       {if !$product.description} aria-selected="true"{/if}>{l s='Product Details' d='Shop.Theme.Catalog'}</a>
@@ -229,9 +211,17 @@
               </div>  
             </div>
           {/block}
+        {block name='product_vendor_info'}
+          {hook h='displayVendorInformation' product=$product} 
+        {/block}
+
+        {block name='product_additional_info'}
+          {include file='catalog/_partials/product-additional-info.tpl'}
+        {/block}
         </div>
       </div>
     </div>
+
 
     {block name='product_accessories'}
       {if $accessories}
@@ -243,9 +233,13 @@
                 {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
               {/block}
             {/foreach}
-          </div>
+          </div>sfsadfadfasdfa
         </section>
       {/if}
+    {/block}
+
+    {block name='display_email_vendor'}
+      {hook h='leoDisplayLeftColumn'}
     {/block}
 
     {block name='product_footer'}
