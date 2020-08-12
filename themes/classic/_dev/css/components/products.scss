@@ -183,7 +183,7 @@
 }
 .tabs {
   @include box-shadow;
-  margin-top: 2rem;
+  margin-bottom:50px;
   background: white;
   padding: $medium-space $large-space;
   .tab-pane {
@@ -538,7 +538,7 @@
   li.product-flag {
     pointer-events: auto;
     width: fit-content;
-    background: $brand-primary;
+    background: #3483fa;
     font-weight: 700;
     padding: 0.3125rem 0.4375rem;
     text-transform: uppercase;
@@ -659,6 +659,7 @@
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
+  margin-bottom:1.5rem;
   ul {
     margin-bottom: 0;
   }

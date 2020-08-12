@@ -50,9 +50,8 @@
     }
   }
   .header-nav {
-    border-bottom: $gray-light 2px solid;
     max-height: 50px;
-    margin-bottom: 30px;
+    margin-bottom:15px;
     #menu-icon {
       vertical-align: middle;
       cursor: pointer;
@@ -307,7 +306,6 @@
   #header {
     background: $gray-light;
     .header-nav {
-      background: white;
       margin-bottom: 0.625rem;
       color: $gray-darker;
       .top-logo {
@@ -349,7 +347,8 @@
         color: $gray-darker;
       }
       .search-widget {
-        width: 100%;
+        width:100%;
+        margin-top: 15px;
       }
     }
     &.is-open {
