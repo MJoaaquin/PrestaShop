@@ -233,7 +233,7 @@
                 {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
               {/block}
             {/foreach}
-          </div>sfsadfadfasdfa
+          </div>
         </section>
       {/if}
     {/block}
