@@ -20,7 +20,7 @@ $product-description-height: 70px;
   .thumbnail-container {
     position: relative;
     margin-bottom: 1.563rem;
-    height: 318px;
+    height: 340px;
     width: $thumbnail-size;
     background: white;
     @include box-shadow;
@@ -31,7 +31,7 @@ $product-description-height: 70px;
           opacity: 1;
         }
         &.no-variants{
-          bottom: 4.2rem;
+          bottom: 5.5rem;
         }
       }
       .product-description::after{
@@ -64,8 +64,11 @@ $product-description-height: 70px;
   }
   .product-title {
     text-align: center;
-    text-transform: capitalize;
+    text-transform: lowercase;
     margin-top: .7rem;
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
   .product-price-and-shipping {
     color: $gray-darker;
@@ -110,7 +113,7 @@ $product-description-height: 70px;
     background: white;
     width: $thumbnail-size;
     bottom: 0;
-    height: 8.125rem !important;
+    height: 9.20rem !important;
     padding-left:15px
   }
 
@@ -127,6 +130,11 @@ $product-description-height: 70px;
       }
     }
   }
+
+  #price-flag {
+    background: #769B59
+  }
+
   .comments_note {
     text-align: center;
     color: $gray;

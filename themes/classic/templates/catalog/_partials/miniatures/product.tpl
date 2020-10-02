@@ -85,6 +85,7 @@
       <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
       {block name='product_flags'}
         <ul class="product-flags">
+          <li class="product-flag" id="price-flag">{$product.price}</li>
           {foreach from=$product.flags item=flag}
             <li class="product-flag {$flag.type}">{$flag.label}</li>
           {/foreach}
